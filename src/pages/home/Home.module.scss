@@ -1,0 +1,15 @@
+.snacks {
+  margin-top: 20rem;
+}
+
+@media only screen and (max-width: 760px) {
+  .snacks {
+    margin-top: 15rem;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .snacks {
+    margin-top: 12rem;
+  }
+}

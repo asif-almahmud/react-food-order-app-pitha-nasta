@@ -1,0 +1,23 @@
+@import "sass/globalStyles";
+
+.summary_container {
+  text-align: center;
+  max-width: 45rem;
+  width: clamp(5rem, 80%, 45rem);
+  margin: auto;
+  position: relative;
+  background-color: darken($color_secondary, 15%);
+  color: $color_primary;
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: 0 1px 15px 5px lighten(gray, 20%);
+
+  .summary_heading {
+    font-size: $fontSize_medium;
+    margin-top: 0;
+  }
+
+  .summary_paragraph {
+    font-size: $fontSize_normal;
+  }
+}

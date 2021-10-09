@@ -1,0 +1,18 @@
+@import "sass/globalStyles";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  .input {
+  }
+
+  .button {
+    @include buttonStyle();
+    font-weight: 400;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}

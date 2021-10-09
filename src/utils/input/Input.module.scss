@@ -1,0 +1,26 @@
+@import "sass/globalStyles";
+
+.input_container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+
+  .input_label {
+    font-size: $fontSize_normal;
+    font-weight: 400;
+    margin-right: 0.25rem;
+  }
+  .input_field {
+    width: 3rem;
+    border-radius: 5px;
+    border: 1px solid #d1d1d1;
+    background: #fff;
+    font: inherit;
+    padding-left: 0.5rem;
+
+    &:active,
+    &:focus {
+      outline: none;
+    }
+  }
+}

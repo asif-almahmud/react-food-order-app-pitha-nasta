@@ -1,0 +1,9 @@
+@import "sass/globalStyles";
+
+.card_container {
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 14px;
+  background-color: lighten($color_secondary, 60%);
+  color: darken($color_secondary, 15%);
+}

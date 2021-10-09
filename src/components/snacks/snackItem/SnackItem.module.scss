@@ -1,0 +1,28 @@
+@import "sass/globalStyles";
+
+.snackItem {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+
+  .snackItem_details_container {
+    .snackItem_name {
+      margin: 0 0 0.25rem 0;
+      font-size: $fontSize_medium;
+    }
+
+    .snackItem_description {
+      font-style: italic;
+      font-size: $fontSize_small;
+    }
+
+    .snackItem_price {
+      margin-top: 0.25rem;
+      font-weight: 500;
+      color: lighten($color_accent, 3%);
+      font-size: $fontSize_normal;
+    }
+  }
+}

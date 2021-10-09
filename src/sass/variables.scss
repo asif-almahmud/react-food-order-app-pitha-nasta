@@ -1,0 +1,26 @@
+// ------------variables---------------
+$margin_extra_large: clamp(1.5rem, 5vw, 3rem);
+$margin_large: clamp(1rem, 4vw, 2rem);
+$margin_medium: clamp(0.5rem, 2.5vw, 1rem);
+$margin_small: clamp(0.25rem, 1.5vw, 0.5rem);
+
+$padding_extra_large: clamp(1.5rem, 5vw, 3rem);
+$padding_large: clamp(1rem, 4vw, 2rem);
+$padding_medium: clamp(0.5rem, 2.5vw, 1rem);
+$padding_small: clamp(0.25rem, 1.5vw, 0.5rem);
+$padding_extra_small: clamp(0.125rem, 0.75vw, 0.25rem);
+
+$fontSize_large: clamp(1.5rem, 5vw, 3rem);
+$fontSize_medium: clamp(1.25rem, 4vw, 1.875rem);
+$fontSize_normal: clamp(0.9375rem, 2.5vw, 1rem);
+$fontSize_small: clamp(0.875rem, 1.5vw, 0.9375rem);
+
+$color_primary: #fff5e2;
+$color_secondary: #87b81a;
+$color_accent: #a87a20;
+
+$shadow_border: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px,
+  rgb(209, 213, 219) 0px 0px 0px 1px inset;
+$shadow_card: rgba(9, 30, 66, 0.25) 0px 1px 1px,
+  rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+$shadow_bottom: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;

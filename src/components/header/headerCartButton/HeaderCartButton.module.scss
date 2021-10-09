@@ -1,0 +1,68 @@
+@import "sass/globalStyles.scss";
+
+.cart_button {
+  cursor: pointer;
+  font: inherit;
+  border: none;
+  background-color: darken($color_secondary, 15%);
+  font-size: $fontSize_normal;
+  color: $color_primary;
+  padding: $padding_small $padding_medium;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: all 0.2s ease-out;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  .icon {
+    width: 1.35rem;
+    height: 1.35rem;
+    margin-right: 0.5rem;
+  }
+
+  .text {
+  }
+
+  .badge {
+    background-color: darken($color_secondary, 5%);
+    padding: 0.25rem 1rem;
+    border-radius: 25px;
+    margin-left: 1rem;
+    font-weight: bold;
+    transition: all 0.5s ease-in-out;
+    // border: 1px solid rgb(255, 255, 255);
+  }
+}
+
+.bump {
+  animation: bump 2s ease-out;
+}
+
+@keyframes bump {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(0.9);
+  }
+  30% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

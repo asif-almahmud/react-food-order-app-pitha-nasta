@@ -1,0 +1,57 @@
+@import "sass/globalStyles";
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  // left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal_overlay_container {
+  padding: 1rem;
+  position: fixed;
+  top: 20vh;
+  left: 20%;
+  right: 20%;
+  max-height: calc(60vh + 2rem);
+  background-color: rgba($color_primary, 0.3);
+  color: lighten($color_secondary, 10%);
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  z-index: 999;
+  animation: slide-down 300ms ease-out forwards;
+  // overflow-y: auto;
+
+  .modal_overlay_content {
+  }
+}
+
+@media (max-height: 830px) {
+  .modal_overlay_container {
+    top: 15vh;
+    left: 5%;
+    right: 5%;
+  }
+}
+
+@media (max-height: 414px) {
+  .modal_overlay_container {
+    top: 10vh;
+    left: 10%;
+    right: 10%;
+  }
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import { Header, Snacks } from "zeeland";
+import { Header, Snacks } from "z-index";
 import classes from "./Home.module.scss";
 
 const { header, snacks } = classes;

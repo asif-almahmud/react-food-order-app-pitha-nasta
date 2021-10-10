@@ -1,20 +1,30 @@
-import React, { useState } from "react";
-import classes from "./SnackItemForm.module.scss";
-import { Input, CartIcon } from "zeeland";
+import React, { useState, useEffect } from "react";
+import classes from "./AddItemForm.module.scss";
+import { Input, CartIcon } from "z-index";
 
 const { form, button } = classes;
 
-const SnackItemForm = (props) => {
-  const [availableItems, setAvailableItems] = useState(10);
+const AddItemForm = (props) => {
+  const [amount, setAmount] = useState(1);
+  const [capacity, setCapacity] = useState("");
+
+  const onSubmitHandler = (e) => {
+    e.preventDefault();
+  };
+
+  useEffect(() => {
+    setCapacity(props.capacity);
+  }, [props.capacity]);
+
   return (
-    <form className={form}>
+    <form className={form} onSubmit={onSubmitHandler}>
       <Input
-        label="Capability"
+        label="Capacity"
         inputProps={{
           id: "capability" + props.id,
           type: "text",
           step: "1",
-          defaultValue: `${availableItems}`,
+          defaultValue: `${capacity}`,
           disabled: true,
           required: false,
         }}
@@ -25,9 +35,9 @@ const SnackItemForm = (props) => {
           id: "amount" + props.id,
           type: "number",
           min: "1",
-          max: `${availableItems}`,
+          max: `${capacity}`,
           step: "1",
-          defaultValue: "1",
+          defaultValue: `${amount}`,
           required: true,
         }}
       />
@@ -39,4 +49,4 @@ const SnackItemForm = (props) => {
   );
 };
 
-export default SnackItemForm;
+export default AddItemForm;

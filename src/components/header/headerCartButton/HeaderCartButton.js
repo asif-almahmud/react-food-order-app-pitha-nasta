@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
-import { CartIcon } from "zeeland";
+import { CartIcon } from "z-index";
 import classes from "./HeaderCartButton.module.scss";
-import { AppContext } from "zeeland";
+import { AppContext } from "z-index";
 
 const { cart_button, bump, icon, text, badge } = classes;
 

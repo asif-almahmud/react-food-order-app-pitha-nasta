@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
 import classes from "./Cart.module.scss";
-import { Modal, AppContext } from "zeeland";
+import { Modal, AppContext } from "z-index";
+import RemoveCircleOutlinedIcon from "@mui/icons-material/RemoveCircleOutlined";
+import AddCircleIcon from "@mui/icons-material/AddCircle";
 
 const {
   cart_container,
@@ -15,43 +17,7 @@ const {
   order_button,
 } = classes;
 
-const cartItems = [
-  { id: "c1", name: "Sushi", amount: 2, price: 12.99 },
-  { id: "c1", name: "Sushi", amount: 2, price: 12.99 },
-  { id: "c1", name: "Sushi", amount: 2, price: 12.99 },
-  { id: "c1", name: "Sushi", amount: 2, price: 12.99 },
-  { id: "c1", name: "Sushi", amount: 2, price: 12.99 },
-  { id: "c1", name: "Sushi", amount: 2, price: 12.99 },
-  { id: "c1", name: "Sushi", amount: 2, price: 12.99 },
-  { id: "c1", name: "Sushi", amount: 2, price: 12.99 },
-  { id: "c1", name: "Sushi", amount: 2, price: 12.99 },
-  { id: "c1", name: "Sushi", amount: 2, price: 12.99 },
-  { id: "c1", name: "Sushrfhjfi", amount: 2, price: 12.99 },
-  { id: "c1", name: "Sushi", amount: 2, price: "dfgdsgeg" },
-  { id: "c1", name: "Sushi", amount: 2, price: 12.99 },
-  { id: "c1", name: "Sushi", amount: "2fghf", price: 12.99 },
-  { id: "c1", name: "Sushi", amount: 2, price: 12.99 },
-  { id: "c1", name: "Sushi", amount: 2, price: 12.99 },
-  { id: "c1", name: "Sushi", amount: 2, price: 12.99 },
-  { id: "c1", name: "Sushi", amount: 2, price: 12.99 },
-  { id: "c1", name: "Sushi", amount: 2, price: 12.99 },
-  { id: "c1", name: "Sushi", amount: 2, price: 12.99 },
-  { id: "c1", name: "Sushi", amount: 452, price: 12.99 },
-  { id: "c1", name: "Sushi", amount: 2, price: 12.99 },
-  { id: "c1", name: "Sushi", amount: 2, price: 12.99 },
-  { id: "c1", name: "Sushi", amount: 2, price: 12.99 },
-  { id: "c1", name: "Sushi", amount: "2fghf", price: 12.99 },
-  { id: "c1", name: "Sushi", amount: 2, price: 12.99 },
-  { id: "c1", name: "Sushi", amount: 2, price: 12.99 },
-  { id: "c1", name: "Sushi", amount: 2, price: 12.99 },
-  { id: "c1", name: "Sushi", amount: 2, price: 12.99 },
-  { id: "c1", name: "Sushi", amount: 2, price: 12.99 },
-  { id: "c1", name: "Sushi", amount: 2, price: 12.99 },
-  { id: "c1", name: "Sushi", amount: 2, price: 12.99 },
-  { id: "c1", name: "Sushi", amount: 2, price: 12.99 },
-  { id: "c1", name: "Sushi", amount: 2, price: 12.99 },
-  { id: "c1", name: "Sushi", amount: 2, price: 12.99 },
-];
+const cartItems = [{ id: "c1", name: "Sushi", amount: 2, price: 12.99 }];
 
 export const Cart = (props) => {
   const { setShowCart } = useContext(AppContext);
@@ -70,9 +36,13 @@ export const Cart = (props) => {
               <li key={item.id} className={cart_list_item}>
                 <span>{item.name}</span>
                 <span>
-                  <span>-</span>
+                  <span>
+                    <RemoveCircleOutlinedIcon />
+                  </span>
                   <span>{item.amount}</span>
-                  <span>+</span>
+                  <span>
+                    <AddCircleIcon />
+                  </span>
                 </span>
                 <span>{item.price}</span>
               </li>

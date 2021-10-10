@@ -10,11 +10,12 @@
 .overflow_hidden {
   max-height: 100vh;
   overflow: hidden;
+  transition: all 0ms ease-out;
 }
 
 /* width */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 7px;
   border: 1px solid #ddd;
   border-radius: 999px;
 }
@@ -27,14 +28,15 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: lighten($color_accent, 10%);
+  background: lighten(#666, 10%);
+  border-radius: 999px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: lighten($color_accent, 0%);
+  background: lighten(#666, 0%);
 }
 
 ::-webkit-scrollbar-thumb:active {
-  background: darken($color_accent, 10%);
+  background: darken(#666, 10%);
 }

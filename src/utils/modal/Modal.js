@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import ReactDOM from "react-dom";
 import classes from "./Modal.module.scss";
-import { AppContext } from "zeeland";
+import { AppContext } from "z-index";
 
 const { backdrop, modal_overlay_container, modal_overlay_content } = classes;
 

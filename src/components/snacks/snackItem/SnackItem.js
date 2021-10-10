@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./SnackItem.module.scss";
-import SnackItemForm from "./SnackItemForm";
+import AddItemForm from "../addItemForm/AddItemForm";
 
 const {
   snackItem,
@@ -20,7 +20,7 @@ export const SnackItem = (props) => {
         <div className={snackItem_price}>{price}</div>
       </div>
       <div>
-        <SnackItemForm id={props.id} />
+        <AddItemForm id={props.id} capacity={props.capacity} />
       </div>
     </li>
   );

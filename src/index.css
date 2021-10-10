@@ -14,29 +14,7 @@ code {
     monospace;
 }
 
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
-  border-radius: 999px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #fff5e2;
-  border-radius: 999px;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #9b9b9b;
-  border-radius: 999px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #7a7a7a;
-}
-
-::-webkit-scrollbar-thumb:active {
-  background: #696969;
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  transition: all 250ms ease-in-out;
 }

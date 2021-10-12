@@ -14,5 +14,8 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    &:active {
+      background-color: darken($color_secondary, 30%);
+    }
   }
 }

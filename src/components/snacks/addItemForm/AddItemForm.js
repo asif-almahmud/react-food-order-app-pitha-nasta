@@ -1,27 +1,35 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import classes from "./AddItemForm.module.scss";
 import { Input, CartIcon } from "z-index";
+import { AppContext } from "z-index";
 
 const { form, button } = classes;
 
 const AddItemForm = (props) => {
   const [amount, setAmount] = useState(1);
   const [capacity, setCapacity] = useState("");
+  const { cart } = useContext(AppContext);
 
-  const onSubmitHandler = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(amount);
+    cart.addItemToCart({ ...props.item, count: parseInt(amount, 10) });
   };
 
   useEffect(() => {
     setCapacity(props.capacity);
   }, [props.capacity]);
 
+  useEffect(() => {
+    console.log(cart);
+  }, [cart]);
+
   return (
-    <form className={form} onSubmit={onSubmitHandler}>
+    <form className={form} onSubmit={handleSubmit}>
       <Input
         label="Capacity"
         inputProps={{
-          id: "capability" + props.id,
+          id: "capability" + `${props.id}`,
           type: "text",
           step: "1",
           defaultValue: `${capacity}`,
@@ -31,14 +39,15 @@ const AddItemForm = (props) => {
       />
       <Input
         label="Amount"
+        setValue={setAmount}
         inputProps={{
-          id: "amount" + props.id,
+          id: "amount" + `${props.id}`,
           type: "number",
           min: "1",
           max: `${capacity}`,
           step: "1",
-          defaultValue: `${amount}`,
           required: true,
+          value: amount,
         }}
       />
       <button className={button}>

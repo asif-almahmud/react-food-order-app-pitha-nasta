@@ -35,9 +35,6 @@
     margin-right: 0.5rem;
   }
 
-  .text {
-  }
-
   .badge {
     background-color: darken($color_secondary, 5%);
     padding: 0.25rem 1rem;
@@ -56,17 +53,24 @@
 @keyframes bump {
   0% {
     transform: scale(1);
+    box-shadow: 0px 0px 5px 0px lighten($color_secondary, 25%);
+    // background-color: darken($color_secondary, 5%);
   }
   10% {
     transform: scale(0.9);
+    box-shadow: 0px 0px 1px 0px lighten($color_secondary, 25%);
   }
   30% {
     transform: scale(1.1);
+    box-shadow: 0px 0px 10px 0px lighten($color_secondary, 25%);
   }
   50% {
     transform: scale(1.15);
+    box-shadow: 0px 0px 15px 0px lighten($color_secondary, 25%);
   }
   100% {
     transform: scale(1);
+    box-shadow: 0px 0px 1px 0px lighten($color_secondary, 25%);
+    // background-color: darken($color_secondary, 5%);
   }
 }

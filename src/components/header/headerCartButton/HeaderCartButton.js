@@ -8,25 +8,14 @@ const { cart_button, bump, icon, text, badge } = classes;
 export const HeaderCartButton = (props) => {
   const [loaded, setLoaded] = useState(false);
   const [cartItems, setCartItems] = useState(0);
-  const { setShowCart } = useContext(AppContext);
-
-  window.addEventListener("load", () => {
-    setLoaded(true);
-  });
+  const { setShowCart, cart } = useContext(AppContext);
 
   useEffect(() => {
     setLoaded(true);
-  }, [cartItems]);
-
-  useEffect(() => {
     setTimeout(() => {
       setLoaded(false);
     }, 2000);
-    return () =>
-      window.removeEventListener("load", () => {
-        setLoaded(true);
-      });
-  }, [loaded]);
+  }, [cart]);
 
   // console.log(showCart);
 
@@ -39,7 +28,7 @@ export const HeaderCartButton = (props) => {
         <CartIcon />
       </span>
       <span className={text}>Your Cart</span>
-      <span className={badge}>{cartItems}</span>
+      <span className={badge}>{cart.items.length}</span>
     </button>
   );
 };

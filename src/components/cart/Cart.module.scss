@@ -12,64 +12,36 @@
       padding: 0;
       font-size: $fontSize_normal;
 
-      .cart_list_heading {
-        display: flex;
-        font-weight: bold;
-        margin-bottom: 0.5rem;
-
-        span {
-          flex: 1;
-          display: flex;
-          padding-right: 1rem;
-        }
-
-        :nth-child(1) {
-          flex: 1;
-          display: flex;
-          justify-content: flex-start;
-        }
-
-        :nth-child(2) {
-          flex: 1;
-          display: flex;
-          justify-content: space-around;
-          padding-right: 0;
-        }
-
-        :last-child {
-          flex: 1;
-          display: flex;
-          justify-content: flex-end;
-        }
-      }
-
       .cart_list_item {
         display: flex;
         margin-bottom: 0.75rem;
 
         span {
-          flex: 1;
           display: flex;
-          padding-right: 1rem;
+          padding-right: 0.5rem;
         }
 
-        :nth-child(1) {
+        > :nth-child(1) {
           flex: 1;
           display: flex;
           justify-content: flex-start;
+          align-items: center;
         }
 
-        :nth-child(2) {
-          flex: 1;
+        > :nth-child(2) {
+          flex: 1.5;
           display: flex;
           padding-right: 0;
+          align-items: center;
 
           :nth-child(odd) {
             flex: 1;
             display: flex;
             justify-content: center;
+            align-items: center;
             padding-right: 0;
             cursor: pointer;
+            font-size: $fontSize_medium;
             &:hover {
               color: darken($color_secondary, 5%);
             }
@@ -81,17 +53,43 @@
             flex: 1;
             display: flex;
             justify-content: center;
+            align-items: center;
             padding-right: 0;
           }
         }
 
-        :nth-child(3) {
-          flex: 1;
+        > :nth-child(3) {
+          flex: 1.5;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        > :nth-child(4) {
+          flex: 0.25;
           display: flex;
           justify-content: flex-end;
+          align-items: center;
+
+          * {
+            font-size: $fontSize_medium;
+            display: inline-block;
+            cursor: pointer;
+            &:hover {
+              color: darken($color_secondary, 5%);
+            }
+            &:active {
+              transform: scale(0.95);
+            }
+          }
         }
       }
     }
+  }
+
+  .close_button_empty_cart {
+    @include buttonStyle(#fff, darken($color_secondary, 10%));
+    padding: $padding_small $padding_extra_large;
   }
 
   .cart_summary_container {
@@ -101,7 +99,7 @@
       align-items: center;
       font-weight: bold;
       font-size: $fontSize_medium;
-      margin: 1rem 0;
+      margin: 1rem 0.75rem 1rem 0.25rem;
     }
     .cart_actions_container {
       text-align: right;
@@ -123,6 +121,38 @@
         padding: $padding_small $padding_extra_large;
         margin: 0.25rem;
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .cart_list_container {
+    * {
+      font-size: 14px;
+      font-weight: normal;
+    }
+  }
+
+  .cart_summary_container {
+    * {
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .cart_list_container {
+    * {
+      font-size: 13px;
+      font-weight: normal;
+    }
+  }
+
+  .cart_summary_container {
+    * {
+      font-size: 14px;
+      font-weight: bold;
     }
   }
 }

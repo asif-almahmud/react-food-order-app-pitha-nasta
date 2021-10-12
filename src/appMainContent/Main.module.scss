@@ -22,7 +22,8 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: $color_primary;
+  background: transparent;
+  border: 1px solid #999999;
   border-radius: 999px;
 }
 

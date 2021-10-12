@@ -1,15 +1,21 @@
-import React from "react";
+import { useState } from "react";
 import classes from "./Input.module.scss";
 
 const { input_container, input_label, input_field } = classes;
 
-export const Input = (props) => {
+export const Input = ({ label, setValue, inputProps }) => {
   return (
     <div className={input_container}>
-      <label htmlFor={props.inputProps.id} className={input_label}>
-        {props.label}
+      <label htmlFor={inputProps.id} className={input_label}>
+        {label}
       </label>
-      <input {...props.inputProps} className={input_field} />
+      <input
+        {...inputProps}
+        className={input_field}
+        onChange={(e) => {
+          setValue(e.target.value);
+        }}
+      />
     </div>
   );
 };

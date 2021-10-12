@@ -7,7 +7,7 @@
   width: 100vw;
   height: 100vh;
   z-index: 20;
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 .modal_overlay_container {
@@ -29,7 +29,7 @@
   }
 }
 
-@media (max-height: 830px) {
+@media (max-height: 840px) and (max-width: 570px) {
   .modal_overlay_container {
     left: 5%;
     right: 5%;

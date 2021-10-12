@@ -1,58 +1,64 @@
-import React from "react";
+import { useState, useEffect, useContext } from "react";
 import classes from "./AvailableSnacks.module.scss";
-import { Card } from "z-index";
+import { Card, AppContext } from "z-index";
 import { SnackItem } from "components/snacks";
 
-const { available_meals_container, available_meals_list } = classes;
+const { available_snacks_container, available_snacks_list } = classes;
 
-const DUMMY_MEALS = [
+const DUMMY_SNACKS = [
   {
     id: "m1",
     name: "Sushi",
     description: "Finest fish and veggies",
-    price: 22.99,
+    price: 22,
     capacity: 5,
   },
   {
     id: "m2",
     name: "Schnitzel",
     description: "A german specialty!",
-    price: 16.5,
+    price: 16,
     capacity: 8,
   },
   {
     id: "m3",
     name: "Barbecue Burger",
     description: "American, raw, meaty",
-    price: 12.99,
+    price: 12,
     capacity: 10,
   },
   {
     id: "m4",
     name: "Green Bowl",
     description: "Healthy...and green...",
-    price: 18.99,
+    price: 18,
     capacity: 4,
   },
 ];
 
 export const AvailableSnacks = () => {
+  const [snacksData, setSnacksData] = useState(DUMMY_SNACKS);
+
   return (
-    <div className={available_meals_container}>
-      <Card>
-        <ul className={available_meals_list}>
-          {DUMMY_MEALS.map((meal) => (
-            <SnackItem
-              id={meal.id}
-              key={meal.id}
-              name={meal.name}
-              description={meal.description}
-              price={meal.price}
-              capacity={meal.capacity}
-            />
-          ))}
-        </ul>
-      </Card>
-    </div>
+    <>
+      {snacksData.length > 0 && (
+        <div className={available_snacks_container}>
+          <Card>
+            <ul className={available_snacks_list}>
+              {snacksData.map((snack) => (
+                <SnackItem
+                  id={snack.id}
+                  key={snack.id}
+                  name={snack.name}
+                  description={snack.description}
+                  price={snack.price}
+                  capacity={snack.capacity}
+                />
+              ))}
+            </ul>
+          </Card>
+        </div>
+      )}
+    </>
   );
 };

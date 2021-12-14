@@ -32,16 +32,7 @@
       darken($color_accent, 25%),
       darken($color_secondary, 5%),
       darken($color_accent, 25%),
-      darken($color_secondary, 5%),
-      darken($color_accent, 25%),
-      darken($color_secondary, 5%),
-      darken($color_accent, 25%),
-      darken($color_secondary, 5%),
-      darken($color_accent, 25%),
-      darken($color_secondary, 5%),
-      darken($color_accent, 25%),
-      darken($color_secondary, 5%),
-      darken($color_accent, 25%)
+      darken($color_secondary, 5%)
     );
     background: -webkit-linear-gradient(
       to right,
@@ -55,23 +46,11 @@
       darken($color_accent, 25%),
       darken($color_secondary, 5%),
       darken($color_accent, 25%),
-      darken($color_secondary, 5%),
-      darken($color_accent, 25%),
-      darken($color_secondary, 5%),
-      darken($color_accent, 25%),
-      darken($color_secondary, 5%),
-      darken($color_accent, 25%),
-      darken($color_secondary, 5%),
-      darken($color_accent, 25%),
-      darken($color_secondary, 5%),
-      darken($color_accent, 25%)
+      darken($color_secondary, 5%)
     );
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-  }
-
-  .cart {
   }
 }
 

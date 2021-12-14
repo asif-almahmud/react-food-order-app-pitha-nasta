@@ -1,7 +1,10 @@
 @import "sass/globalStyles.scss";
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap");
 
 .header_text_container {
-  background-color: $color_primary;
+  // background-color: $color_primary;
+  background-color: lighten($color_primary, 10%);
+
   position: fixed;
   top: 0;
   left: 0;
@@ -13,9 +16,59 @@
   align-items: center;
   box-shadow: 0px 1px 4px #000000;
   .header_text {
-    color: darken($color_secondary, 15%);
+    // color: darken($color_secondary, 15%);
     font-size: $fontSize_extra_large;
-    font-family: "Concert One", cursive;
+    font-weight: bolder;
+    font-family: "Dancing Script", cursive;
+    background: linear-gradient(
+      to right,
+      darken($color_secondary, 5%),
+      darken($color_accent, 25%),
+      darken($color_secondary, 5%),
+      darken($color_accent, 25%),
+      darken($color_secondary, 5%),
+      darken($color_accent, 25%),
+      darken($color_secondary, 5%),
+      darken($color_accent, 25%),
+      darken($color_secondary, 5%),
+      darken($color_accent, 25%),
+      darken($color_secondary, 5%),
+      darken($color_accent, 25%),
+      darken($color_secondary, 5%),
+      darken($color_accent, 25%),
+      darken($color_secondary, 5%),
+      darken($color_accent, 25%),
+      darken($color_secondary, 5%),
+      darken($color_accent, 25%),
+      darken($color_secondary, 5%),
+      darken($color_accent, 25%)
+    );
+    background: -webkit-linear-gradient(
+      to right,
+      darken($color_secondary, 5%),
+      darken($color_accent, 25%),
+      darken($color_secondary, 5%),
+      darken($color_accent, 25%),
+      darken($color_secondary, 5%),
+      darken($color_accent, 25%),
+      darken($color_secondary, 5%),
+      darken($color_accent, 25%),
+      darken($color_secondary, 5%),
+      darken($color_accent, 25%),
+      darken($color_secondary, 5%),
+      darken($color_accent, 25%),
+      darken($color_secondary, 5%),
+      darken($color_accent, 25%),
+      darken($color_secondary, 5%),
+      darken($color_accent, 25%),
+      darken($color_secondary, 5%),
+      darken($color_accent, 25%),
+      darken($color_secondary, 5%),
+      darken($color_accent, 25%)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   .cart {
@@ -34,6 +87,8 @@
     transform: rotateZ(-5deg) translateY(-4rem) translateX(-1rem);
     position: fixed;
     top: 5rem;
+    filter: grayscale(50%);
+    border-bottom: 1px solid #8d8d8d;
   }
 }
 

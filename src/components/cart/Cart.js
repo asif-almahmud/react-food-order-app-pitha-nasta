@@ -15,11 +15,12 @@ const {
   cart_summary_container,
   cart_total_amount,
   cart_actions_container,
+  clear_button,
   close_button,
   order_button,
 } = classes;
 
-export const Cart = (props) => {
+export const Cart = () => {
   const { setShowCart, cart } = useContext(AppContext);
 
   return (
@@ -93,17 +94,30 @@ export const Cart = (props) => {
 
             <div className={cart_actions_container}>
               <button
-                className={close_button}
-                onClick={() => setShowCart(false)}
+                className={clear_button}
+                onClick={() => {
+                  cart.makeCartEmpty();
+                }}
               >
-                Close
+                Clear Cart
               </button>
-              <button
-                className={order_button}
-                onClick={() => setShowCart(false)}
-              >
-                Order
-              </button>
+              <span>
+                <button
+                  className={close_button}
+                  onClick={() => setShowCart(false)}
+                >
+                  Close
+                </button>
+                <button
+                  className={order_button}
+                  onClick={() => {
+                    cart.makeCartEmpty();
+                    setShowCart(false);
+                  }}
+                >
+                  Order
+                </button>
+              </span>
             </div>
           </div>
         )}

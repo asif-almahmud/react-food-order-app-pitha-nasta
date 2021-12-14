@@ -5,6 +5,19 @@
   min-height: 100vh;
   background: $color_primary;
   padding-bottom: 3rem;
+  // background-color: white;
+  // background-image: linear-gradient(25deg, #f6f7f8 25%, transparent 25%),
+  //   linear-gradient(-25deg, #f6f7f8 25%, transparent 25%),
+  //   linear-gradient(25deg, transparent 75%, #f6f7f8 75%),
+  //   linear-gradient(-25deg, transparent 75%, #f6f7f8 75%);
+  // background-size: 20px 20px;
+  // background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+  // background: linear-gradient(18deg, #eceddc 25%, transparent 25%) -50px 0,
+  //   linear-gradient(28deg, #eceddc 25%, transparent 25%) -50px 0,
+  //   linear-gradient(38deg, #eceddc 25%, transparent 25%),
+  //   linear-gradient(45deg, #eceddc 25%, transparent 25%);
+  // background-size: 100px 100px;
+  // background-color: #50e3c2;
 }
 
 .overflow_hidden {
@@ -17,20 +30,20 @@
 ::-webkit-scrollbar {
   width: 7px;
   border: 1px solid #ddd;
-  border-radius: 999px;
+  // border-radius: 12px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
   background: transparent;
-  border: 1px solid #999999;
-  border-radius: 999px;
+  // border: 1px solid #e6e6e6;
+  // border-radius: 12px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: lighten(#666, 10%);
-  border-radius: 999px;
+  // border-radius: 12px;
 }
 
 /* Handle on hover */

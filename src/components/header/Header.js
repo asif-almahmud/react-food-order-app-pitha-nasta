@@ -11,11 +11,11 @@ const {
   header_image_container,
 } = classes;
 
-export const Header = (props) => {
+export const Header = () => {
   return (
     <>
       <header className={header_text_container}>
-        <h1 className={header_text}>Pitha-Nasta</h1>
+        <h1 className={header_text}>Pitha Nasta</h1>
         <HeaderCartButton />
       </header>
       <div className={header_image_container}>

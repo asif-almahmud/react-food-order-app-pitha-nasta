@@ -3,6 +3,7 @@
 .snack_item {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 1rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid #ccc;
@@ -21,7 +22,7 @@
     .snack_item_price {
       margin-top: 0.25rem;
       font-weight: 500;
-      color: lighten($color_accent, 3%);
+      color: darken($color_accent, 45%);
       font-size: $fontSize_normal;
     }
   }

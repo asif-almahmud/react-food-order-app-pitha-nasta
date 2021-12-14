@@ -2,6 +2,7 @@
 
 .cart_container {
   position: relative;
+  color: lighten($color_secondary, 30%);
   .cart_list_container {
     max-height: 35vh;
     overflow-y: auto;
@@ -88,7 +89,7 @@
   }
 
   .close_button_empty_cart {
-    @include buttonStyle(#fff, darken($color_secondary, 10%));
+    @include buttonStyle(#fff, darken($color_secondary, 5%));
     padding: $padding_small $padding_extra_large;
   }
 
@@ -102,8 +103,21 @@
       margin: 1rem 0.75rem 1rem 0.25rem;
     }
     .cart_actions_container {
-      text-align: right;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       font-size: $fontSize_normal;
+
+      .clear_button {
+        @include buttonStyle(#fff, transparent);
+        padding: $padding_small $padding_extra_large;
+        margin: 0.25rem;
+        box-shadow: inset 0px 0px 0px 1px darken($color_secondary, 5%);
+        &:hover {
+          background-color: darken($color_secondary, 20%);
+          box-shadow: inset 0px 0px 0px 1px darken($color_secondary, 20%);
+        }
+      }
 
       .close_button {
         @include buttonStyle(#fff, transparent);

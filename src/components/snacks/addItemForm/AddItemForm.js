@@ -8,7 +8,9 @@ const { form, button } = classes;
 const AddItemForm = (props) => {
   const [amount, setAmount] = useState(1);
   const [capacity, setCapacity] = useState("");
+  const [itemIsAdded, setItemIsAdded] = useState(false);
   const { cart } = useContext(AppContext);
+  let itemNames = [];
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -21,7 +23,21 @@ const AddItemForm = (props) => {
   }, [props.capacity]);
 
   useEffect(() => {
-    console.log(cart);
+    if (cart.items.length > 0) {
+      for (let x = 0; x < cart.items.length; x++) {
+        itemNames.push(cart.items[x].name);
+      }
+    }
+
+    if (itemNames.includes(props.item.name)) {
+      setItemIsAdded(true);
+    } else {
+      setItemIsAdded(false);
+    }
+
+    console.log(itemNames);
+    console.log(props.item.name);
+    console.log(itemNames.includes(props.item.name));
   }, [cart]);
 
   return (
@@ -50,10 +66,22 @@ const AddItemForm = (props) => {
           value: amount,
         }}
       />
-      <button className={button}>
-        <span>Add &nbsp;to &nbsp;</span>{" "}
-        <CartIcon style={{ width: "1.125rem", height: "1.125rem" }} />
-      </button>
+
+      {!itemIsAdded && (
+        <button className={button}>
+          <span>Add &nbsp;to &nbsp;</span>{" "}
+          <CartIcon style={{ width: "1.125rem", height: "1.125rem" }} />
+        </button>
+      )}
+      {itemIsAdded && (
+        <button
+          className={button}
+          disabled
+          style={{ backgroundColor: "#003E4A" }}
+        >
+          <span>&nbsp; Added &nbsp;</span>
+        </button>
+      )}
     </form>
   );
 };

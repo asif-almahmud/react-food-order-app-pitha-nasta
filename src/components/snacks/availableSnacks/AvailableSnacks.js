@@ -5,52 +5,58 @@ import { SnackItem } from "components/snacks";
 
 const { available_snacks_container, available_snacks_list } = classes;
 
-const DUMMY_SNACKS = [
-  {
-    id: "m1",
-    name: "Sushi",
-    description: "Finest fish and veggies",
-    price: 22,
-    capacity: 5,
-  },
-  {
-    id: "m2",
-    name: "Schnitzel",
-    description: "A german specialty!",
-    price: 16,
-    capacity: 8,
-  },
-  {
-    id: "m3",
-    name: "Barbecue Burger",
-    description: "American, raw, meaty",
-    price: 12,
-    capacity: 10,
-  },
-  {
-    id: "m4",
-    name: "Green Bowl",
-    description: "Healthy...and green...",
-    price: 18,
-    capacity: 4,
-  },
-];
-
 export const AvailableSnacks = () => {
-  const [snacksData, setSnacksData] = useState(DUMMY_SNACKS);
+  const [availableSnacksData, setAvailableSnacks] = useState([
+    {
+      capacity: 100,
+      name: "Chitoi Pitha",
+      price: 10,
+      shortDesc: "Highly porous and Delicious",
+    },
+    {
+      capacity: 70,
+      name: "Bhapa Pitha",
+      price: 20,
+      shortDesc: "Fine texture, tasty from inside in every bite",
+    },
+    {
+      capacity: 40,
+      name: "Narikeler Pitha (Fried)",
+      price: 20,
+      shortDesc: "Crispy and mouth watering taste",
+    },
+    {
+      capacity: 40,
+      name: "Narikeler Pitha (Boiled)",
+      price: 20,
+      shortDesc: "Soft, gummy, delicious",
+    },
+    {
+      capacity: 30,
+      name: "Pua Pitha",
+      price: 10,
+      shortDesc: "Reddish fried, crispy and oily",
+    },
+    {
+      capacity: 60,
+      name: "Khir Patishapta",
+      price: 25,
+      shortDesc: "Delicious",
+    },
+  ]);
 
   return (
     <>
-      {snacksData.length > 0 && (
+      {availableSnacksData.length > 0 && (
         <div className={available_snacks_container}>
           <Card>
             <ul className={available_snacks_list}>
-              {snacksData.map((snack) => (
+              {availableSnacksData.map((snack) => (
                 <SnackItem
                   id={snack.id}
                   key={snack.id}
                   name={snack.name}
-                  description={snack.description}
+                  description={snack.shortDesc}
                   price={snack.price}
                   capacity={snack.capacity}
                 />

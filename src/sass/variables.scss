@@ -16,9 +16,13 @@ $fontSize_medium: clamp(1.125rem, 3vw, 1.25rem);
 $fontSize_normal: clamp(0.9375rem, 2.5vw, 1rem);
 $fontSize_small: clamp(0.875rem, 1.5vw, 0.9375rem);
 
-$color_primary: #f8f7ff;
-$color_secondary: #00b9e7;
-$color_accent: #ca7900;
+// $color_primary: #f8f7ff;
+// $color_secondary: #00b9e7;
+// $color_accent: #476407;
+
+$color_primary: #effdff;
+$color_secondary: #007f96;
+$color_accent: #93dae2;
 
 $shadow_border: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px,
   rgb(209, 213, 219) 0px 0px 0px 1px inset;
